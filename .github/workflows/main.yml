@@ -1,1 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Dearest Friend 💙</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      min-height: 100vh;
+    }
 
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding: 16px;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    nav button {
+      background: transparent;
+      border: 2px solid #ffffff;
+      color: #ffffff;
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    nav button:hover {
+      background: #ffffff;
+      color: #203a43;
+      transform: translateY(-2px);
+    }
+
+    section {
+      display: none;
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 22px;
+      animation: fadeUp 0.7s ease;
+    }
+
+    section.active { display: block; }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      margin-bottom: 20px;
+      opacity: 0.95;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.9;
+      margin-bottom: 18px;
+      opacity: 0.95;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.12);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    }
+
+    .hero {
+      text-align: center;
+    }
+
+    .highlight {
+      color: #ffd369;
+      font-weight: 600;
+    }
+
+    .qualities {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .qualities div {
+      background: rgba(255,255,255,0.18);
+      padding: 24px;
+      border-radius: 18px;
+      font-size: 1.05rem;
+    }
+
+    .timeline {
+      margin-top: 25px;
+      text-align: left;
+    }
+
+    .timeline p {
+      margin-bottom: 14px;
+      border-left: 3px solid #ffd369;
+      padding-left: 14px;
+    }
+
+    .surprise-box {
+      width: 220px;
+      height: 220px;
+      margin: 35px auto;
+      border-radius: 26px;
+      background: linear-gradient(135deg, #ffd369, #ff9f1c);
+      color: #203a43;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.35s ease;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    }
+
+    .surprise-box:hover {
+      transform: scale(1.07) rotate(1deg);
+    }
+
+    .secret {
+      display: none;
+      margin-top: 25px;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      animation: fadeUp 0.8s ease;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <button onclick="showSection('home')">Welcome</button>
+  <button onclick="showSection('about')">About You</button>
+  <button onclick="showSection('journey')">Our Journey</button>
+  <button onclick="showSection('surprise')">Surprise</button>
+  <button onclick="showSection('wish')">Birthday Wish</button>
+</nav>
+
+<section id="home" class="active">
+  <div class="card hero">
+    <h1>Happy Birthday 🎉</h1>
+    <h2>To <span class="highlight">My Dearest Friend</span></h2>
+    <p>
+      This is not just a website. It’s a small digital space created with care,
+      respect, and a lot of warmth — just for you.
+    </p>
+    <p>
+      Today celebrates more than your birthday. It celebrates your presence,
+      your kindness, and the positive energy you bring into my life.
+    </p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="card">
+    <h1>Why You Matter 🌟</h1>
+    <p>
+      Some people make life lighter just by being themselves — you are one of them.
+      Your sincerity, your calm strength, and your understanding nature make you
+      someone truly rare.
+    </p>
+    <div class="qualities">
+      <div>🤍 A heart that genuinely cares</div>
+      <div>🧠 A mind full of wisdom and ideas</div>
+      <div>🌱 A soul that keeps growing</div>
+      <div>✨ A presence that brings peace</div>
+    </div>
+  </div>
+</section>
+
+<section id="journey">
+  <div class="card">
+    <h1>Our Journey Together 📖</h1>
+    <p>
+      Friendship is not about how long you’ve known someone — it’s about how deeply
+      they become part of your life. And you have earned a special place.
+    </p>
+    <div class="timeline">
+      <p>✨ Moments of laughter that turned into memories</p>
+      <p>✨ Conversations that brought clarity and comfort</p>
+      <p>✨ Support that never needed to be asked for</p>
+      <p>✨ Trust that grew naturally over time</p>
+    </div>
+  </div>
+</section>
+
+<section id="surprise">
+  <div class="card hero">
+    <h1>A Little Surprise 🎁</h1>
+    <p>
+      Click the box below. What’s inside is simple — but it’s honest.
+    </p>
+    <div class="surprise-box" onclick="reveal()">
+      Click to Open
+    </div>
+    <div class="secret" id="secret">
+      💙 You are appreciated more than words can say.
+      Your presence makes days better, conversations deeper,
+      and friendship meaningful. Never doubt your value.
+    </div>
+  </div>
+</section>
+
+<section id="wish">
+  <div class="card">
+    <h1>My Birthday Wish For You 🎂</h1>
+    <p>
+      May this new year of your life bring you confidence in your path,
+      peace in your heart, and success in everything you pursue.
+    </p>
+    <p>
+      May you always be surrounded by people who respect you,
+      support you, and celebrate you — just as you deserve.
+    </p>
+    <p>
+      Happy Birthday once again. Stay genuine. Stay strong.
+      And never stop being the incredible person you are.
+    </p>
+  </div>
+</section>
+
+<footer>
+  Crafted with respect, warmth, and sincerity 💙
+</footer>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function reveal() {
+    document.getElementById('secret').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
